@@ -23,19 +23,21 @@ train_labels = pd.read_csv('data/trainLabels.csv', header=None)
 
 
 
-# train_labels.value_counts().plot(kind='bar')
-# plt.title('label distribution')
-# plt.xlabel('crime type')
-# plt.ylabel('counts')
+train_labels.value_counts().plot(kind='bar')
+plt.title('label distribution')
+plt.xlabel('crime type')
+plt.ylabel('counts')
 
-# plt.show()
+plt.show()
 
 
-# correlation_matrix = train_data.corr()
-# plt.figure(figsize=(12, 10))
-# sns.heatmap(correlation_matrix, annot=False, cmap='coolwarm')
-# plt.title("corelation Matrix")
-# plt.show()
+correlation_matrix = train_data.corr()
+plt.figure(figsize=(12, 10))
+sns.heatmap(correlation_matrix, annot=False, cmap='coolwarm')
+plt.title("corelation Matrix")
+plt.xlabel('correlation coefficient')
+plt.ylabel('features')
+plt.show()
 
-correlation_with_target = train_data.corrwith(train_labels[0])
-print(correlation_with_target.sort_values(ascending=False))
+# correlation_with_target = train_data.corrwith(train_labels[0])
+# print(correlation_with_target.sort_values(ascending=False))
