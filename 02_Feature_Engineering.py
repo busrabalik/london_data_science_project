@@ -47,3 +47,5 @@ X_train, X_test, y_train, y_test = train_test_split(X_pca, labels, test_size=0.2
 clf = RandomForestClassifier()
 clf.fit(X_train, y_train)
 print(clf.score(X_test, y_test))
+
+
